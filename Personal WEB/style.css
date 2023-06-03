@@ -1,0 +1,413 @@
+@import url("https://fonts.google.com/?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: black;
+  --text-color: #ededed;
+  --main-color: rgb(133, 120, 51);
+  --second-color: rgb(99, 99, 99);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: 600;
+  margin-left: 4.5rem;
+  transition: 2s;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  padding: 9%;
+  background: url("file:///C:/WEB/Personal%20WEB/images/home.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-content {
+  max-width: 60rem;
+}
+
+.home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.home-content .text-animated {
+  position: relative;
+  width: 32rem;
+}
+
+.home-content .text-animated h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 0.7px var(--main-color);
+}
+
+.home-content p {
+  font-size: 4rem;
+  margin: 2rem 0 3rem;
+}
+
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 35rem;
+  height: 8rem;
+}
+
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 50%;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn-box .btn:hover {
+  color: var(--main-color);
+}
+
+.btn-box:nth-child(2) {
+  background: transparent;
+  color: var(--main-color);
+}
+
+.btn-box:nth-child(2)::hover {
+  color: var(--bg-color);
+}
+
+.btn-box:nth-child(2)::before {
+  background: var(--main-color);
+}
+
+.btn-box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box .btn:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 6rem;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 40px;
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.home-sci a:hover {
+  color: var(--bg-color);
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.home-imgHover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid var(--bg-color);
+  transition: 3s;
+}
+
+.home-imgHover:hover {
+  background: var(--bg-color);
+  opacity: 8;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--bg-color);
+  padding-bottom: 6rem;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.about-img {
+  position: relative;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img  {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 0.2rem solid var(--main-color);
+}
+
+.about-img .circle-spin {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 0.2rem solid var(--main-color);
+  border-bottom: 0.2rem solid var(--main-color);
+  border-left: 0.2rem solid var(--second-color);
+  border-right: 0.2rem solid var(--second-color);
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.btn-box.btns {
+  display: inline-block;
+  width: 15rem;
+}
+
+.btn-box.btns a::before {
+  background: var(--bg-color);
+}
+
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  padding-bottom: 5rem;
+}
+
+.experience .experience-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.experience-row .experience-column {
+  flex: 1 1 40rem;
+}
+
+.experience-column .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 2rem;
+}
+
+.experience-column .experience-box {
+  border-left: 0.2rem solid var(--main-color);
+}
+
+.experience-box .experience-content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.experience-content .content {
+  position: relative;
+  padding: 1.5rem;
+  border: 2rem solid var(--main-color);
+  border-radius: 6rem;
+  margin-bottom: 2rem;
+}
+
+.experience-content .content .year {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  padding-bottom: 0.5rem;
+}
+
+.skills {
+  min-height: auto;
+  padding-bottom: 7rem;
+  background: var(--second-color);
+}
+
+.skills .skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.skills-row .skills-column {
+  flex: 4rem;
+}
+
+.skills-column .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content {
+  position: relative;
+  border: 2rem solid var(--main-color);
+  border-radius: 6rem;
+  padding: 5rem 1.5rem;
+}
+
+.skills-content .progress {
+  padding: 1rem 0;
+}
+
+.skills-content .progress h3 {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-content .progress h3 span {
+  color: var(--text-color);
+}
+
+.skills-content .progress .bar {
+  height: 2.5rem;
+  border-radius: 6rem;
+  border: 2rem solid var(--main-color);
+  padding: 5rem;
+  margin: 1rem 0;
+}
+
+.skills-content .progress .bar span {
+  display: block;
+  height: 100%;
+  border-radius: 7rem;
+  background: var(--main-color);
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+  width: 80%;
+}
+
